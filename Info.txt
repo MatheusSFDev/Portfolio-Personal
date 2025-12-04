@@ -1,11 +1,15 @@
+Paginas:
+ - Home (Sobre Mi / Trabajos / Estudios)
+ - Conocimientos
+ - Proyectos
+ * Todos tienen el mismo Footer (Nombres / Contactos)
+
+Utilidades:
+ - https://prismic.io/blog/css-button-animations : Numº 15
+ - https://uiverse.io
+
 Ejemplos de Portfolios:
  - https://yone.dev
  - https://www.rammaheshwari.com
  - https://www.onyedika.xyz
  - https://www.seanhalpin.xyz
-
-Paginas:
- - Home (Sobre Mi / Trabajos / Estudios)
- - Conocimientos (Lenguajes / Tecnologias / Sistemas / etc.)
- - Proyectos
- - Contacto (Redes / Enlaces)
