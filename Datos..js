@@ -10,7 +10,8 @@ export const misDatos = {
             desc : "",
             foto : "", // ruta
             year : "",
-            month : ""
+            month : "",
+            lugar : ""
         }
     ],
 
@@ -20,7 +21,8 @@ export const misDatos = {
             desc : "",
             foto : "", // ruta
             year : "",
-            month : ""
+            month : "",
+            lugar : ""
         }
     ],
 
