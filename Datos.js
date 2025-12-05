@@ -5,7 +5,7 @@ export const misDatos = {
     miniDesc : "",
 
     experienciaLaboral : [
-        experiencia_1 = {
+        {
             nombre : "",
             desc : "",
             foto : "", // ruta
@@ -16,7 +16,7 @@ export const misDatos = {
     ],
 
     estudios : [
-        estudio_1 = {
+        {
             nombre : "",
             desc : "",
             foto : "", // ruta
@@ -27,21 +27,21 @@ export const misDatos = {
     ],
 
     contactos : [
-        contacto_1 = {
+        {
             link : "",
             img : "" //ruta
         }
     ],
 
     conocimientos : [
-        skill_1 = {
+        {
             nombre : "",
             img : "" // ruta
         }
     ],
 
     proyectos : [
-        proyecto_1 = {
+        {
             titulo : "",
             desc : "",
             fecha : "",
