@@ -1,9 +1,9 @@
 import {generarHeader, generarFooter, llenarHeaderFooter, generarBotonIdiomas} from './renderHeaderFooter.js';
 let idioma = localStorage.getItem("lang") || "es";
-const Pagina = window.location.pathname.split("/");
+const Pagina = window.location.pathname.split("/").pop();
 
 function renderPagina() {
-    switch (Pagina[Pagina.length-1]) {
+    switch (Pagina) {
         case "home.html" :
             generarHeader();
             // generar Home
@@ -29,7 +29,7 @@ function renderPagina() {
 }
 
 function rellenarPagina() {
-    switch (Pagina[Pagina.length-1]) {
+    switch (Pagina) {
         case "home.html" :
             llenarHeaderFooter(idioma);
             // rellenar Home

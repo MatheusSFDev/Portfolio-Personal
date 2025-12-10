@@ -13,8 +13,8 @@ export function generarHeader() {
         </header>
     `;
 
-    const Pagina = window.location.pathname.split("/");
-    document.getElementById("nav_" + Pagina[Pagina.length-1].split(".")[0]).classList.add("bg-green-300");
+    const Pagina = window.location.pathname.split("/").pop().split(".")[0];
+    document.getElementById("nav_" + Pagina).classList.add("bg-green-300");
 }
 
 export function generarFooter() {
