@@ -1,4 +1,4 @@
-import {generarHeader, generarFooter, llenarHeaderFooter, generarBotonIdiomas} from './renderHeaderFooter.js';
+import {generarHeader, generarFooter, llenarHeaderFooter, generarBotonIdiomas} from './renders/renderHeaderFooter.js';
 let idioma = localStorage.getItem("lang") || "es";
 const Pagina = window.location.pathname.split("/").pop();
 

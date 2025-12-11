@@ -1,5 +1,5 @@
-import {misDatos} from './Datos.js';
-import {UI} from './UI.js';
+import {misDatos} from '../Datos.js';
+import {UI} from '../UI.js';
 
 export function generarHeader() {
     document.getElementById("header").outerHTML = `
