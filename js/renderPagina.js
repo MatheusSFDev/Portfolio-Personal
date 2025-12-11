@@ -3,17 +3,18 @@ let idioma = localStorage.getItem("lang") || "es";
 const Pagina = window.location.pathname.split("/").pop();
 
 function renderPagina() {
+    generarHeader();
+    generarFooter();
+
     switch (Pagina) {
         case "home.html" :
-            generarHeader();
-            // generar Home
-            generarFooter();
+            // generar Contenido
             break;
-        case "" :
-            //
+        case "skills.html" :
+            // generar Contenido
             break;
-        case "" :
-            //
+        case "projects.html" :
+            // generar Contenido
             break;
     }
 
@@ -29,16 +30,17 @@ function renderPagina() {
 }
 
 function rellenarPagina() {
+    llenarHeaderFooter(idioma);
+
     switch (Pagina) {
         case "home.html" :
-            llenarHeaderFooter(idioma);
             // rellenar Home
             break;
-        case "" :
-            //
+        case "skills.html" :
+            // rellenar Home
             break;
-        case "" :
-            //
+        case "projects.html" :
+            // rellenar Home
             break;
     }
 }

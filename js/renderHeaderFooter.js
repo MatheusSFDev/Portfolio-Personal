@@ -4,29 +4,29 @@ import {UI} from './UI.js';
 export function generarHeader() {
     document.getElementById("header").outerHTML = `
         <header id="header" class="p-2 sticky top-0">
-            <nav class="flex justify-between items-center w-full px-4 py-2 rounded-full bg-white/25">
-                <a id="nav_home" class="px-2 py-1 rounded-full" href=""></a>
-                <a id="nav_skills" class="px-2 py-1 rounded-full" href=""></a>
-                <a id="nav_projects" class="px-2 py-1 rounded-full" href=""></a>
-                <a id="nav_contact" class="px-2 py-1 rounded-full" href=""></a>
+            <nav class="flex justify-between items-center w-full px-4 py-2 rounded-full bg-[#EFF1ED]/50">
+                <a id="nav_home" class="px-2 py-1 rounded-full" href="home.html"></a>
+                <a id="nav_skills" class="px-2 py-1 rounded-full" href="skills.html"></a>
+                <a id="nav_projects" class="px-2 py-1 rounded-full" href="projects.html"></a>
+                <a id="nav_contact" class="px-2 py-1 rounded-full" href="#footer_contact"></a>
             </nav>
         </header>
     `;
 
     const Pagina = window.location.pathname.split("/").pop().split(".")[0];
-    document.getElementById("nav_" + Pagina).classList.add("bg-green-300");
+    document.getElementById("nav_" + Pagina).classList.add("bg-[#373D20]", "text-white");
 }
 
 export function generarFooter() {
     document.getElementById("footer").outerHTML = `
-        <footer id="footer" class="flex flex-col justify-center items-center gap-1 p-4">
-            <div class="flex justify-center items-center w-full">
+        <footer id="footer" class="flex flex-col justify-center items-center gap-2 p-4 bg-[#766153] text-white relative z-20">
+            <div class="flex justify-center items-center w-full text-lg">
                 <p id="footer_nombreDev" class="mr-2 text-right font-mono">${misDatos.nombreDev}</p>
-                <div class="w-1 h-1 rounded-full bg-black"></div>
+                <div class="w-1 h-1 rounded-full bg-white"></div>
                 <p class="ml-2">Matheus Souza Fernandes</p>
             </div>
 
-            <p id="footer_contact"></p>
+            <p id="footer_contact" class="text-2xl"></p>
 
             <div id="footer_contactos" class="flex justify-center items-center gap-4">
                 ${generarContactos()}
@@ -47,14 +47,14 @@ function generarContactos() {
 
 export function generarBotonIdiomas(idiomaActual) {
     if (!document.getElementById("cambiarIdioma")) {
-        document.body.innerHTML += `<div id="cambiarIdioma" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2"></div>`;
+        document.body.innerHTML += `<div id="cambiarIdioma" class="fixed bottom-5 right-5 z-10 flex flex-col gap-2"></div>`;
     }
 
-    const claseActiva = "bg-blue-600 text-white border-blue-600 shadow-blue-500/50";
-    const claseInactiva = "bg-white text-gray-700 hover:bg-gray-100 border-gray-200";
+    const claseActiva = "bg-[#373D20] text-white border-[#373D20] shadow-[#373D20]/50";
+    const claseInactiva = "bg-white border-[#373D20]";
 
     document.getElementById("cambiarIdioma").innerHTML = `
-        <div class="flex flex-col p-1.5 bg-white/90 backdrop-blur-sm rounded-full shadow-xl border border-gray-200">
+        <div class="flex flex-col p-1.5 bg-[#EFF1ED]/75 backdrop-blur-sm rounded-full shadow-xl border border-[#373D20]">
             <button id="btn-es" class="w-10 h-10 rounded-full font-bold text-xs transition-all duration-300 border mb-1 ${idiomaActual === 'es' ? claseActiva : claseInactiva}">ES</button>
             <button id="btn-en" class="w-10 h-10 rounded-full font-bold text-xs transition-all duration-300 border ${idiomaActual === 'en' ? claseActiva : claseInactiva}">EN</button>
         </div>
