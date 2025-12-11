@@ -4,6 +4,9 @@ Paginas:
  - Proyectos
  * Todos tienen el mismo Footer (Nombres / Contactos)
 
+Paleta de Colores:
+ - https://coolors.co/eff1ed-373d20-717744-bcbd8b-766153
+
 Utilidades:
  - https://prismic.io/blog/css-button-animations : Numº 15
  - https://uiverse.io
