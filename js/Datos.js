@@ -1,14 +1,38 @@
 export const misDatos = {
     nombreDev : "MatheusSFDev",
     fotoPerfil : "/imgs/fotoPerfil.jpeg",
-    descPersonal : "Soy un estudiante de Desarrollo Web apasionado por entender cómo funcionan las cosas. " +
-                    "Esa curiosidad me llevó primero a dominar Sistemas y Redes, " +
-                    "y ahora a construir aplicaciones completas con PHP, SQL y tecnologías Web. " +
-                    "Mi trayectoria es tan versátil como mi código: " +
-                    "he trabajado en soporte técnico, en desarrollo remoto y en equipos internacionales. " +
-                    "Me comunico con fluidez en portugués y español (y me defiendo muy bien en inglés). " +
-                    "Si buscas a alguien que se adapte rápido, colabore y disfrute aprendiendo cada día, hablemos.",
-    miniDesc : "Desarrollo Full-Stack respaldado en Redes y Sistemas. Creo webs sólidas y funcionales integrando lo mejor de ambos mundos.",
+    adjetivosPersonales : {
+        es : [
+            "Programador",
+            "Desarrollador Full-Stack",
+            "Desarrollador Web"
+        ],
+        en : [
+            "Programmer",
+            "Full-Stack Developer",
+            "Web Developer"
+        ]
+    },
+    descPersonal : {
+        es : "Soy un estudiante de Desarrollo Web apasionado por entender cómo funcionan las cosas. " +
+                "Esa curiosidad me llevó primero a dominar Sistemas y Redes, " +
+                "y ahora a construir aplicaciones completas con PHP, SQL y tecnologías Web. " +
+                "Mi trayectoria es tan versátil como mi código: " +
+                "he trabajado en soporte técnico, en desarrollo remoto y en equipos internacionales. " +
+                "Me comunico con fluidez en portugués y español (y me defiendo muy bien en inglés). " +
+                "Si buscas a alguien que se adapte rápido, colabore y disfrute aprendiendo cada día, hablemos.",
+        en : "I am a Web Development student passionate about understanding how things work. " +
+                "That curiosity led me first to master Systems and Networks, " +
+                "and now to build complete applications with PHP, SQL, and Web technologies. " +
+                "My background is as versatile as my code: " +
+                "I have worked in technical support, in remote development, and in international teams. " +
+                "I communicate fluently in Portuguese and Spanish (and I handle myself very well in English). " +
+                "If you are looking for someone who adapts quickly, collaborates, and enjoys learning every day, let's talk."
+    },
+    miniDesc : {
+        es : "Desarrollo Full-Stack respaldado en Redes y Sistemas. Creo webs sólidas y funcionales integrando lo mejor de ambos mundos.",
+        en : "Full-Stack Development backed by Networks and Systems. I create solid, functional websites integrating the best of both worlds."
+    },
 
     experienciaLaboral : [
         {

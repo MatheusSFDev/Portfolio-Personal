@@ -1,10 +1,11 @@
 import {misDatos} from '../Datos.js';
 import {UI} from '../UI.js';
+const Pagina = window.location.pathname.split("/").pop().split(".")[0];
 
 export function generarHeader() {
     document.getElementById("header").outerHTML = `
-        <header id="header" class="p-2 sticky top-0">
-            <nav class="flex justify-between items-center w-full px-4 py-2 rounded-full bg-[#EFF1ED]/50">
+        <header id="header" class="w-full p-2 fixed top-0 flex justify-center items-center">
+            <nav class="flex justify-between items-center px-3 py-2 rounded-full bg-[#EFF1ED]/50">
                 <a id="nav_home" class="px-2 py-1 rounded-full" href="home.html"></a>
                 <a id="nav_skills" class="px-2 py-1 rounded-full" href="skills.html"></a>
                 <a id="nav_projects" class="px-2 py-1 rounded-full" href="projects.html"></a>
@@ -13,7 +14,6 @@ export function generarHeader() {
         </header>
     `;
 
-    const Pagina = window.location.pathname.split("/").pop().split(".")[0];
     document.getElementById("nav_" + Pagina).classList.add("bg-[#373D20]", "text-white");
 }
 
@@ -67,4 +67,5 @@ export function llenarHeaderFooter(idioma) {
     document.getElementById("nav_projects").innerHTML = UI.nav.projects[idioma];
     document.getElementById("nav_contact").innerHTML = UI.nav.contact[idioma];
     document.getElementById("footer_contact").innerHTML = UI.footer.contact[idioma];
+    document.title = UI.nav[Pagina][idioma];
 }

@@ -23,5 +23,21 @@ export const UI = {
             es : "Hablemos",
             en : "Contact Me"
         }
+    },
+
+    titulos : {
+        home : {
+            es : "Hola! Me llamo Matheus Souza Fernandes y soy un ",
+            en : "Hello! My name is Matheus Souza Fernandes and I am a "
+        }
+    },
+    
+    paginas : {
+        home : {
+            scroll : {
+                es : "Desliza",
+                en : "Scroll"
+            }
+        }
     }
 };

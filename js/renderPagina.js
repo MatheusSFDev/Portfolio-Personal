@@ -1,4 +1,5 @@
 import {generarHeader, generarFooter, llenarHeaderFooter, generarBotonIdiomas} from './renders/renderHeaderFooter.js';
+import {generarHome, llenarHome} from './renders/renderHome.js';
 let idioma = localStorage.getItem("lang") || "es";
 const Pagina = window.location.pathname.split("/").pop();
 
@@ -8,7 +9,7 @@ function renderPagina() {
 
     switch (Pagina) {
         case "home.html" :
-            // generar Contenido
+            generarHome();
             break;
         case "skills.html" :
             // generar Contenido
@@ -34,7 +35,7 @@ function rellenarPagina() {
 
     switch (Pagina) {
         case "home.html" :
-            // rellenar Home
+            llenarHome(idioma);
             break;
         case "skills.html" :
             // rellenar Home
