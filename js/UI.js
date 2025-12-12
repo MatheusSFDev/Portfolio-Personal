@@ -37,6 +37,10 @@ export const UI = {
             scroll : {
                 es : "Desliza",
                 en : "Scroll"
+            },
+            tituloSobre : {
+                es : "Sobre Mi",
+                en : "About Me"
             }
         }
     }
