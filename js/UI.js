@@ -41,6 +41,10 @@ export const UI = {
             tituloSobre : {
                 es : "Sobre Mi",
                 en : "About Me"
+            },
+            tituloExpLaboral : {
+                es : "Experiencia Laboral",
+                en : "Work Experience"
             }
         }
     }

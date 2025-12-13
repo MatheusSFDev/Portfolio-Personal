@@ -42,11 +42,60 @@ const SobreMi = `
     </div>
 `;
 
+const expLaboral = `
+    <div class="w-full py-8 bg-[#EFF1ED] flex flex-col justify-center items-center">
+        <h1 id="tituloExpLaboral" class="text-center text-3xl font-medium px-6 mb-4"></h1>
+        <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6"></div>
+
+        <div class="w-full pr-4">
+            ${generarExpLab()}
+        </div>
+    </div>
+`;
+
+function generarExpLab() {
+    let html = ""; 
+    let count = 1;
+
+    misDatos.experienciaLaboral.forEach(exp => {
+        html += `
+            <div class="relative pl-[30vw] pb-8 group last:pb-0">
+                <img src="${exp.img}" alt="${exp.nombre}" class="absolute left-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-r-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs">
+                <div class="absolute left-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden"></div>
+
+                <div class="flex flex-col gap-2">         
+                    <h3 class="text-xl font-bold">${exp.nombre}</h3>
+
+                    <span class="w-fit text-sm font-semibold text-white bg-[#766153] px-2 py-0.5 rounded">
+                        ${exp.year}
+                    </span>
+                    
+                    <p class="text-sm text-black/80 italic flex items-center gap-1">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+
+                        <span id="lugar${count}"></span>
+                    </p>
+                    
+                    <p id="descExp${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify"></p>
+                </div>
+            </div>
+        `;
+
+        count++;
+    });
+
+    return html;
+}
+
 export function generarHome() {
     document.getElementById("app").outerHTML = `
         <div id="app" class="flex flex-col justify-center items-center">
             ${Portada}
             ${SobreMi}
+            ${expLaboral}
         </div>
     `;
 }
@@ -57,6 +106,14 @@ export function llenarHome(idioma) {
     document.getElementById("scroll").innerText = UI.paginas.home.scroll[idioma];
     document.getElementById("tituloSobre").innerText = UI.paginas.home.tituloSobre[idioma];
     document.getElementById("descPersonal").innerText = misDatos.descPersonal[idioma];
+    document.getElementById("tituloExpLaboral").innerText = UI.paginas.home.tituloExpLaboral[idioma];
+
+    let count = 1;
+    misDatos.experienciaLaboral.forEach(exp => {
+        document.getElementById("lugar" + count).innerText = exp.lugar[idioma];
+        document.getElementById("descExp" + count).innerText = exp.desc[idioma];
+        count++;
+    });
     
     Typify('#typify', {
         text: misDatos.adjetivosPersonales[idioma],

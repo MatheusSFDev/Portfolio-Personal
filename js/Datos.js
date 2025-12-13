@@ -37,17 +37,29 @@ export const misDatos = {
     experienciaLaboral : [
         {
             nombre : "Doctorphone",
-            desc : "Durante este periodo, fui responsable de actualizar y mantener el sitio web de comercio electrónico de la empresa con nuevos productos, además de realizar la gestión de inventario y la organización de accesorios en el almacén. Proporcioné soporte técnico para el diagnóstico de hardware, lo que incluyó el desmontaje de dispositivos para identificar piezas de reparación, y configuré un servidor FTP local para uso interno.",
+            desc : {
+                es : "Durante este periodo, fui responsable de actualizar y mantener el sitio web de comercio electrónico de la empresa con nuevos productos, además de realizar la gestión de inventario y la organización de accesorios en el almacén. Proporcioné soporte técnico para el diagnóstico de hardware, lo que incluyó el desmontaje de dispositivos para identificar piezas de reparación, y configuré un servidor FTP local para uso interno.",
+                en : "During this period, I was responsible for updating and maintaining the company's e-commerce website with new products, as well as managing inventory and organizing accessories in the warehouse. I provided technical support for hardware diagnostics, which included disassembling devices to identify repair parts, and configured a local FTP server for internal use."
+            },
             img : "/imgs/trabajos/doctorphone.png",
             year : "2024",
-            lugar : "Vizela, Portugal"
+            lugar : {
+                es : "Vizela, Portugal",
+                en : "Vizela, Portugal"
+            }
         },
         {
             nombre : "YoneDev",
-            desc : "En esta experiencia adquirí conocimientos prácticos en desarrollo backend utilizando Node.js, Express.js y TypeScript. Aprendí a construir y documentar APIs RESTful mediante herramientas como Swagger y apliqué flujos de trabajo de desarrollo modernos y principios de control de versiones, tales como Git Flow y la gestión de repositorios. También fui introducido a los conceptos y pipelines de Integración y Entrega Continua (CI/CD).",
+            desc : {
+                es : "En esta experiencia adquirí conocimientos prácticos en desarrollo backend utilizando Node.js, Express.js y TypeScript. Aprendí a construir y documentar APIs RESTful mediante herramientas como Swagger y apliqué flujos de trabajo de desarrollo modernos y principios de control de versiones, tales como Git Flow y la gestión de repositorios. También fui introducido a los conceptos y pipelines de Integración y Entrega Continua (CI/CD).",
+                en : "In this experience, I acquired practical knowledge in backend development using Node.js, Express.js, and TypeScript. I learned to build and document RESTful APIs using tools like Swagger and applied modern development workflows and version control principles, such as Git Flow and repository management. I was also introduced to Continuous Integration and Continuous Delivery (CI/CD) concepts and pipelines."
+            },
             img : "/imgs/trabajos/yonedev.png",
             year : "2025",
-            lugar : "En Remoto"
+            lugar : {
+                es : "En Remoto",
+                en : "Remote"
+            }
         }
     ],
 
