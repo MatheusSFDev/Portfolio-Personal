@@ -48,7 +48,7 @@ export const UI = {
             },
             tituloEstudios : {
                 es : "Estudios",
-                en : "Estudies"
+                en : "Studies"
             }
         }
     }
