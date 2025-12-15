@@ -53,6 +53,17 @@ const expLaboral = `
     </div>
 `;
 
+const Estudios = `
+    <div class="w-full py-8 bg-[#EFF1ED] flex flex-col justify-center items-center">
+        <h1 id="tituloEstudios" class="text-center text-3xl font-medium px-6 mb-4"></h1>
+        <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6"></div>
+
+        <div class="w-full pl-4">
+            ${generarEstudios()}
+        </div>
+    </div>
+`;
+
 function generarExpLab() {
     let html = ""; 
     let count = 1;
@@ -76,10 +87,47 @@ function generarExpLab() {
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
 
-                        <span id="lugar${count}"></span>
+                        <span id="lugarExp${count}"></span>
                     </p>
                     
                     <p id="descExp${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify"></p>
+                </div>
+            </div>
+        `;
+
+        count++;
+    });
+
+    return html;
+}
+
+function generarEstudios() {
+    let html = ""; 
+    let count = 1;
+
+    misDatos.estudios.forEach(estudio => {
+        html += `
+            <div class="relative pr-[30vw] pb-8 group last:pb-0">
+                <img src="${estudio.img}" alt="${estudio.nombre}" class="absolute right-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-l-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs">
+                <div class="absolute right-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden"></div>
+
+                <div class="flex flex-col items-end gap-2">         
+                    <h3 id="nombreEstudio${count}" class="text-xl font-bold text-right"></h3>
+
+                    <span class="w-fit text-sm font-semibold text-white bg-[#766153] px-2 py-0.5 rounded">
+                        ${estudio.years}
+                    </span>
+                    
+                    <p class="text-sm text-black/80 italic text-right flex items-center gap-1">
+                        <span id="lugarEstudio${count}"></span>
+
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </p>
+                    
+                    <p id="descEstudio${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify"></p>
                 </div>
             </div>
         `;
@@ -96,6 +144,7 @@ export function generarHome() {
             ${Portada}
             ${SobreMi}
             ${expLaboral}
+            ${Estudios}
         </div>
     `;
 }
@@ -107,11 +156,20 @@ export function llenarHome(idioma) {
     document.getElementById("tituloSobre").innerText = UI.paginas.home.tituloSobre[idioma];
     document.getElementById("descPersonal").innerText = misDatos.descPersonal[idioma];
     document.getElementById("tituloExpLaboral").innerText = UI.paginas.home.tituloExpLaboral[idioma];
+    document.getElementById("tituloEstudios").innerText = UI.paginas.home.tituloEstudios[idioma];
 
     let count = 1;
     misDatos.experienciaLaboral.forEach(exp => {
-        document.getElementById("lugar" + count).innerText = exp.lugar[idioma];
+        document.getElementById("lugarExp" + count).innerText = exp.lugar[idioma];
         document.getElementById("descExp" + count).innerText = exp.desc[idioma];
+        count++;
+    });
+
+    count = 1;
+    misDatos.estudios.forEach(estudio => {
+        document.getElementById("nombreEstudio" + count).innerText = estudio.nombre[idioma];
+        document.getElementById("lugarEstudio" + count).innerText = estudio.lugar[idioma];
+        document.getElementById("descEstudio" + count).innerText = estudio.desc[idioma];
         count++;
     });
     

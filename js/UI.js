@@ -45,6 +45,10 @@ export const UI = {
             tituloExpLaboral : {
                 es : "Experiencia Laboral",
                 en : "Work Experience"
+            },
+            tituloEstudios : {
+                es : "Estudios",
+                en : "Estudies"
             }
         }
     }

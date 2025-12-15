@@ -65,20 +65,36 @@ export const misDatos = {
 
     estudios : [
         {
-            nombre : "Grado Medio en Sistemas Microinformáticos y Redes (CFGM SMR)",
-            desc : "Durante este ciclo, construí una base sólida en sistemas operativos y redes. Aquí aprendí los fundamentos técnicos esenciales para gestionar infraestructuras informáticas, asegurando el correcto funcionamiento y la interconexión de los sistemas.",
+            nombre : {
+                es : "Grado Medio en Sistemas Microinformáticos y Redes (CFGM SMR)",
+                en : "Intermediate Degree in Microcomputer Systems and Networks (CFGM SMR)"
+            },
+            desc : {
+                es : "Durante este ciclo, construí una base sólida en sistemas operativos y redes. Aquí aprendí los fundamentos técnicos esenciales para gestionar infraestructuras informáticas, asegurando el correcto funcionamiento y la interconexión de los sistemas.",
+                en : "During this cycle, I built a solid foundation in operating systems and networks. Here I learned the essential technical fundamentals to manage IT infrastructures, ensuring the correct functioning and interconnection of systems."
+            },
             img : "/imgs/estudios/smr.jpeg",
-            yearInicio : "2022",
-            yearFinal : "2024",
-            lugar : "IES José Maria Perez Pulido, La Palma, España"
+            years : "2022 - 2024",
+            lugar : {
+                es : "IES José Maria Perez Pulido, La Palma, España",
+                en : "IES José Maria Perez Pulido, La Palma, Spain"
+            }
         },
         {
-            nombre : "Grado Superior en Desarrollo de Aplicaciones Web (CFGS DAW)",
-            desc : "En esta formación superior me especializo, centrándome en el análisis y desarrollo de software y aplicaciones. A través de este estudio, adquiero las competencias necesarias para el diseño y la administración tanto de bases de datos como de aplicaciones, lo que me permite crear y gestionar arquitecturas de software completas.",
+            nombre : {
+                es : "Grado Superior en Desarrollo de Aplicaciones Web (CFGS DAW)",
+                en : "Higher Technician in Web Application Development (CFGS DAW)"
+            },
+            desc : {
+                es : "En esta formación superior me especializo, centrándome en el análisis y desarrollo de software y aplicaciones. A través de este estudio, adquiero las competencias necesarias para el diseño y la administración tanto de bases de datos como de aplicaciones, lo que me permite crear y gestionar arquitecturas de software completas.",
+                en : "In this higher education program, I specialize in software and application analysis and development. Through these studies, I acquire the necessary skills for designing and administering both databases and applications, allowing me to create and manage complete software architectures."
+            },
             img : "/imgs/estudios/daw.png",
-            yearInicio : "2024",
-            yearFinal : "Ahora",
-            lugar : "IES José Maria Perez Pulido, La Palma, España"
+            years : "2024 - 2026",
+            lugar : {
+                es : "IES José Maria Perez Pulido, La Palma, España",
+                en : "IES José Maria Perez Pulido, La Palma, Spain"
+            }
         }
     ],
 
