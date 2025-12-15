@@ -37,7 +37,7 @@ const SobreMi = `
 
         <div>
             <img src="${misDatos.fotoPerfil}" class="w-5/10 rounded-r-full float-left mr-4 mb-4 shadow-xl shadow-[#373D20]/25 border-y border-r border-[#373D20]">
-            <p id="descPersonal" class="text-justify text-lg px-4"></p>
+            <p id="descPersonal" class="text-justify text-lg px-8"></p>
         </div>
     </div>
 `;
@@ -47,7 +47,7 @@ const expLaboral = `
         <h1 id="tituloExpLaboral" class="text-center text-3xl font-medium px-6 mb-4"></h1>
         <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6"></div>
 
-        <div class="w-full pr-4">
+        <div class="w-full pr-8">
             ${generarExpLab()}
         </div>
     </div>
@@ -58,7 +58,7 @@ const Estudios = `
         <h1 id="tituloEstudios" class="text-center text-3xl font-medium px-6 mb-4"></h1>
         <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6"></div>
 
-        <div class="w-full pl-4">
+        <div class="w-full pl-8">
             ${generarEstudios()}
         </div>
     </div>
