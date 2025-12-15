@@ -6,6 +6,7 @@ const Pagina = window.location.pathname.split("/").pop();
 function renderPagina() {
     generarHeader();
     generarFooter();
+    document.documentElement.style.scrollBehavior = 'smooth';
 
     switch (Pagina) {
         case "home.html" :
