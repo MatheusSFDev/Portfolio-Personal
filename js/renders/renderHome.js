@@ -13,18 +13,18 @@ const Portada = `
         }
     </style>
 
-    <div class="w-full bg-[url(../imgs/fotoPortada.jpeg)] bg-cover bg-center">    
+    <div id="Portada" class="w-full bg-[url(../imgs/fotoPortada.jpeg)] bg-cover bg-center">    
         <div class="flex flex-col justify-center items-center gap-6 h-screen w-full pb-[10vh] bg-black/40 text-white">
-            <p id="tituloPortada" class="w-2/3 text-center text-xl xs:text-3xl text-shadow-lg/20"></p>
-            <div class="w-2/3 h-[2px] bg-white rounded-full"></div>
-            <p id="miniDesc" class="w-2/3 text-justify xs:text-lg"></p>
+            <p id="tituloPortada" class="w-2/3 text-center text-xl text-shadow-lg/20 xs:text-3xl sm:w-6/10"></p>
+            <div class="w-2/3 h-[2px] bg-white rounded-full sm:w-6/10"></div>
+            <p id="miniDesc" class="w-2/3 text-justify xs:text-lg sm:w-6/10 sm:text-xl"></p>
 
             <div class="absolute bottom-5 flex flex-col items-center gap-2">
                 <div class="w-[30px] h-[50px] rounded-full border-2 border-white flex justify-center pt-2 box-border">
                     <div class="w-[4px] h-[4px] bg-white rounded-full animate-scroll"></div>
                 </div>
                 
-                <span id="scroll" class="text-xs font-light tracking-widest opacity-80"></span>
+                <span id="scroll" class="text-xs font-light tracking-widest opacity-80 sm:text-sm"></span>
             </div>
         </div>
     </div>
@@ -36,8 +36,8 @@ const SobreMi = `
         <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6"></div>
 
         <div>
-            <img src="${misDatos.fotoPerfil}" class="w-4/10 xs:w-5/10 rounded-r-full float-left mr-4 mb-4 shadow-xl shadow-[#373D20]/25 border-y border-r border-[#373D20]">
-            <p id="descPersonal" class="text-justify text-base xs:text-lg px-8"></p>
+            <img src="${misDatos.fotoPerfil}" class="w-4/10 rounded-r-full float-left mr-4 mb-4 shadow-xl shadow-[#373D20]/25 border-y border-r border-[#373D20]">
+            <p id="descPersonal" class="text-justify px-8 xs:text-lg sm:text-xl"></p>
         </div>
     </div>
 `;
@@ -70,18 +70,18 @@ function generarExpLab() {
 
     misDatos.experienciaLaboral.forEach(exp => {
         html += `
-            <div class="relative pl-[30vw] pb-8 group last:pb-0">
-                <img src="${exp.img}" alt="${exp.nombre}" class="absolute left-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-r-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs">
-                <div class="absolute left-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden"></div>
+            <div class="relative pl-[30vw] pb-8 group last:pb-0 sm:pl-[25vw]">
+                <img src="${exp.img}" alt="${exp.nombre}" class="absolute left-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-r-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw]">
+                <div class="absolute left-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:left-[8vw]"></div>
 
                 <div class="flex flex-col gap-2">         
-                    <h3 class="text-lg xs:text-xl font-bold">${exp.nombre}</h3>
+                    <h3 class="text-lg font-bold xs:text-xl sm:text-2xl">${exp.nombre}</h3>
 
-                    <span class="w-fit text-sm font-semibold text-white bg-[#766153] px-2 py-0.5 rounded">
+                    <span class="w-fit text-sm font-semibold text-white bg-[#766153] px-2 py-0.5 rounded sm:text-base">
                         ${exp.year}
                     </span>
                     
-                    <p class="text-sm text-black/80 italic flex items-center gap-1">
+                    <p class="text-sm text-black/80 italic flex items-center gap-1 sm:text-base">
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -90,7 +90,7 @@ function generarExpLab() {
                         <span id="lugarExp${count}" class="w-9/10"></span>
                     </p>
                     
-                    <p id="descExp${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify"></p>
+                    <p id="descExp${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify sm:text-lg"></p>
                 </div>
             </div>
         `;
@@ -107,18 +107,18 @@ function generarEstudios() {
 
     misDatos.estudios.forEach(estudio => {
         html += `
-            <div class="relative pr-[30vw] pb-8 group last:pb-0">
-                <img src="${estudio.img}" alt="${estudio.nombre}" class="absolute right-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-l-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs">
-                <div class="absolute right-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden"></div>
+            <div class="relative pr-[30vw] pb-8 group last:pb-0 sm:pr-[25vw]">
+                <img src="${estudio.img}" alt="${estudio.nombre}" class="absolute right-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-l-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw]">
+                <div class="absolute right-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:right-[8vw]"></div>
 
                 <div class="flex flex-col items-end gap-2">         
-                    <h3 id="nombreEstudio${count}" class="text-lg xs:text-xl font-bold text-right"></h3>
+                    <h3 id="nombreEstudio${count}" class="text-lg font-bold text-right xs:text-xl sm:text-2xl"></h3>
 
-                    <span class="w-fit text-sm font-semibold text-white bg-[#766153] px-2 py-0.5 rounded">
+                    <span class="w-fit text-sm font-semibold text-white bg-[#766153] px-2 py-0.5 rounded sm:text-base">
                         ${estudio.years}
                     </span>
                     
-                    <p class="text-sm text-black/80 italic text-right flex justify-end items-center gap-1">
+                    <p class="text-sm text-black/80 italic text-right flex justify-end items-center gap-1 sm:text-base">
                         <span id="lugarEstudio${count}" class="w-9/10"></span>
 
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,7 +127,7 @@ function generarEstudios() {
                         </svg>
                     </p>
                     
-                    <p id="descEstudio${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify"></p>
+                    <p id="descEstudio${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify sm:text-lg"></p>
                 </div>
             </div>
         `;

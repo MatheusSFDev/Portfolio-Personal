@@ -5,11 +5,11 @@ const Pagina = window.location.pathname.split("/").pop().split(".")[0];
 export function generarHeader() {
     document.getElementById("header").outerHTML = `
         <header id="header" class="w-full p-2 fixed top-0 z-100 flex justify-center items-center text-xs xs:text-base">
-            <nav class="flex justify-between items-center px-3 py-2 rounded-full bg-[#EFF1ED]/50">
-                <a id="nav_home" class="px-2 py-1 rounded-full" href="home.html"></a>
+            <nav class="flex justify-between items-center px-3 py-2 rounded-full bg-[#EFF1ED]/40 backdrop-blur-xs">
+                <a id="nav_home" class="px-2 py-1 rounded-full" href="home.html#Portada"></a>
+                <a id="nav_contact" class="px-2 py-1 rounded-full" href="#footer_contact"></a>
                 <a id="nav_skills" class="px-2 py-1 rounded-full" href="skills.html"></a>
                 <a id="nav_projects" class="px-2 py-1 rounded-full" href="projects.html"></a>
-                <a id="nav_contact" class="px-2 py-1 rounded-full" href="#footer_contact"></a>
             </nav>
         </header>
     `;
@@ -54,7 +54,7 @@ export function generarBotonIdiomas(idiomaActual) {
     const claseInactiva = "bg-white border-[#373D20]";
 
     document.getElementById("cambiarIdioma").innerHTML = `
-        <div class="flex flex-col p-1.5 bg-[#EFF1ED]/75 backdrop-blur-sm rounded-full shadow-xl border border-[#373D20]">
+        <div class="flex flex-col p-1.5 bg-[#EFF1ED]/10 backdrop-blur-sm rounded-full shadow-xl border border-[#373D20]">
             <button id="btn-es" class="w-8 h-8 xs:w-10 xs:h-10 rounded-full font-bold text-xs transition-all duration-300 border mb-1 ${idiomaActual === 'es' ? claseActiva : claseInactiva}">ES</button>
             <button id="btn-en" class="w-8 h-8 xs:w-10 xs:h-10 rounded-full font-bold text-xs transition-all duration-300 border ${idiomaActual === 'en' ? claseActiva : claseInactiva}">EN</button>
         </div>
