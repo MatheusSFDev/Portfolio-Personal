@@ -36,7 +36,7 @@ const SobreMi = `
         <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6 md:w-[70vw]"></div>
 
         <div>
-            <img src="${misDatos.fotoPerfil}" class="w-4/10 rounded-r-full float-left mr-4 mb-4 shadow-xl shadow-[#373D20]/25 border-y border-r border-[#373D20] md:rounded-full md:border">
+            <img src="${misDatos.fotoPerfil}" class="w-4/10 rounded-r-full float-left mr-4 mb-4 shadow-xl shadow-[#373D20]/25 border-y border-r border-[#373D20] md:rounded-full md:border lg:w-3/10">
             <p id="descPersonal" class="text-justify px-8 xs:text-lg sm:text-xl md:text-2xl md:px-0 md:pt-2"></p>
         </div>
     </div>
@@ -70,9 +70,9 @@ function generarExpLab() {
 
     misDatos.experienciaLaboral.forEach(exp => {
         html += `
-            <div class="relative pl-[30vw] pb-8 group last:pb-0 sm:pl-[25vw]">
-                <img src="${exp.img}" alt="${exp.nombre}" class="absolute left-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-r-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw] md:rounded-full">
-                <div class="absolute left-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:left-[8vw] md:left-[10vw]"></div>
+            <div class="relative pl-[30vw] pb-8 group last:pb-0 sm:pl-[25vw] lg:pl-[20vw]">
+                <img src="${exp.img}" alt="${exp.nombre}" class="absolute left-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-r-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw] md:rounded-full lg:w-[15vw] lg:h-[15vw]">
+                <div class="absolute left-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:left-[8vw] md:left-[10vw] lg:left-[7.5vw]"></div>
 
                 <div class="flex flex-col gap-2">         
                     <h3 class="text-lg font-bold xs:text-xl sm:text-2xl md:text-3xl">${exp.nombre}</h3>
@@ -107,9 +107,9 @@ function generarEstudios() {
 
     misDatos.estudios.forEach(estudio => {
         html += `
-            <div class="relative pr-[30vw] pb-8 group last:pb-0 sm:pr-[25vw]">
-                <img src="${estudio.img}" alt="${estudio.nombre}" class="absolute right-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-l-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw] md:rounded-full">
-                <div class="absolute right-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:right-[8vw] md:right-[10vw]"></div>
+            <div class="relative pr-[30vw] pb-8 group last:pb-0 sm:pr-[25vw] lg:pr-[20vw]">
+                <img src="${estudio.img}" alt="${estudio.nombre}" class="absolute right-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-l-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw] md:rounded-full lg:w-[15vw] lg:h-[15vw]">
+                <div class="absolute right-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:right-[8vw] md:right-[10vw] lg:right-[7.5vw]"></div>
 
                 <div class="flex flex-col items-end gap-2">         
                     <h3 id="nombreEstudio${count}" class="text-lg font-bold text-right xs:text-xl sm:text-2xl md:text-3xl"></h3>
