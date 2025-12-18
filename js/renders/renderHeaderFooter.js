@@ -4,8 +4,8 @@ const Pagina = window.location.pathname.split("/").pop().split(".")[0];
 
 export function generarHeader() {
     document.getElementById("header").outerHTML = `
-        <header id="header" class="w-full p-2 fixed top-0 z-100 flex justify-center items-center text-xs xs:text-base md:text-lg">
-            <nav class="flex justify-between items-center px-3 py-2 rounded-full bg-[#EFF1ED]/40 backdrop-blur-xs">
+        <header id="header" class="w-full p-2 fixed top-0 z-100 flex justify-center items-center text-xs xs:text-base md:text-lg xl:text-xl">
+            <nav class="flex justify-between items-center px-3 py-2 rounded-full bg-[#EFF1ED]/40 backdrop-blur-xs md:gap-2 xl:gap-4">
                 <a id="nav_home" class="px-2 py-1 rounded-full" href="home.html#Portada"></a>
                 <a id="nav_contact" class="px-2 py-1 rounded-full" href="#footer_contact"></a>
                 <a id="nav_skills" class="px-2 py-1 rounded-full" href="skills.html"></a>
@@ -20,13 +20,13 @@ export function generarHeader() {
 export function generarFooter() {
     document.getElementById("footer").outerHTML = `
         <footer id="footer" class="flex flex-col justify-center items-center gap-2 p-4 bg-[#766153] text-white relative z-20">
-            <div class="flex justify-center items-center w-full text-xs xs:text-base md:text-xl">
+            <div class="flex justify-center items-center w-full text-xs xs:text-base md:text-xl xl:text-2xl">
                 <p id="footer_nombreDev" class="mr-2 text-right font-mono">${misDatos.nombreDev}</p>
                 <div class="w-1 h-1 rounded-full bg-white"></div>
                 <p class="ml-2">Matheus Souza Fernandes</p>
             </div>
 
-            <p id="footer_contact" class="text-lg xs:text-2xl md:text-3xl"></p>
+            <p id="footer_contact" class="text-lg xs:text-2xl md:text-3xl xl:text-4xl"></p>
 
             <div id="footer_contactos" class="flex justify-center items-center gap-4">
                 ${generarContactos()}
@@ -39,7 +39,7 @@ function generarContactos() {
     let elementos = "";
 
     misDatos.contactos.forEach(element => {
-        elementos += `<a href="${element.link}" target="_blank"><img src="${element.img}" class="w-8 xs:w-10 md:w-12"></a>`;    
+        elementos += `<a href="${element.link}" target="_blank"><img src="${element.img}" class="w-8 xs:w-10 md:w-12 xl:w-16"></a>`;    
     });
 
     return elementos;

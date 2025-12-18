@@ -15,9 +15,9 @@ const Portada = `
 
     <div id="Portada" class="w-full bg-[url(../imgs/fotoPortada.jpeg)] bg-cover bg-center md:bg-left">    
         <div class="flex flex-col justify-center items-center gap-6 h-screen w-full pb-[10vh] bg-black/40 text-white">
-            <p id="tituloPortada" class="w-2/3 text-center text-xl text-shadow-lg/20 xs:text-3xl sm:w-6/10 md:w-4/10 md:text-4xl"></p>
-            <div class="w-2/3 h-[2px] bg-white rounded-full sm:w-6/10 md:w-4/10"></div>
-            <p id="miniDesc" class="w-2/3 text-justify xs:text-lg sm:w-6/10 sm:text-xl md:w-4/10 md:text-2xl"></p>
+            <p id="tituloPortada" class="w-2/3 text-center text-xl text-shadow-lg/20 xs:text-3xl sm:w-6/10 md:w-4/10 md:text-4xl xl:w-3/10"></p>
+            <div class="w-2/3 h-[2px] bg-white rounded-full sm:w-6/10 md:w-4/10 xl:w-3/10"></div>
+            <p id="miniDesc" class="w-2/3 text-justify xs:text-lg sm:w-6/10 sm:text-xl md:w-4/10 md:text-2xl xl:w-3/10"></p>
 
             <div class="absolute bottom-5 flex flex-col items-center gap-2">
                 <div class="w-[30px] h-[50px] rounded-full border-2 border-white flex justify-center pt-2 box-border">
@@ -31,21 +31,21 @@ const Portada = `
 `;
 
 const SobreMi = `
-    <div class="w-full py-8 bg-[#EFF1ED] flex flex-col justify-center items-center md:px-[15vw]">
+    <div class="w-full py-8 flex flex-col justify-center items-center md:px-[15vw] xl:px-[0vw] xl:sticky xl:top-10 xl:w-4/10">
         <h1 id="tituloSobre" class="text-center text-xl font-medium px-6 mb-4 xs:text-3xl md:text-4xl"></h1>
-        <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6 md:w-[70vw]"></div>
+        <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6 md:w-[70vw] xl:w-[40vw]"></div>
 
         <div>
-            <img src="${misDatos.fotoPerfil}" class="w-4/10 rounded-r-full float-left mr-4 mb-4 shadow-xl shadow-[#373D20]/25 border-y border-r border-[#373D20] md:rounded-full md:border lg:w-3/10">
+            <img src="${misDatos.fotoPerfil}" class="w-4/10 rounded-r-full float-left mr-4 mb-4 shadow-xl shadow-[#373D20]/25 border-y border-r border-[#373D20] md:rounded-full md:border lg:w-3/10 xl:w-5/10">
             <p id="descPersonal" class="text-justify px-8 xs:text-lg sm:text-xl md:text-2xl md:px-0 md:pt-2"></p>
         </div>
     </div>
 `;
 
 const expLaboral = `
-    <div class="w-full py-8 bg-[#EFF1ED] flex flex-col justify-center items-center md:px-[15vw]">
+    <div class="w-full py-8 flex flex-col justify-center items-center md:px-[15vw] xl:px-[0vw]">
         <h1 id="tituloExpLaboral" class="text-center text-xl font-medium px-6 mb-4 xs:text-3xl md:text-4xl"></h1>
-        <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6 md:w-[70vw]"></div>
+        <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6 md:w-[70vw] xl:w-[40vw]"></div>
 
         <div class="w-full pr-8 md:p-0">
             ${generarExpLab()}
@@ -54,9 +54,9 @@ const expLaboral = `
 `;
 
 const Estudios = `
-    <div class="w-full py-8 bg-[#EFF1ED] flex flex-col justify-center items-center md:px-[15vw]">
+    <div class="w-full py-8 flex flex-col justify-center items-center md:px-[15vw] xl:px-[0vw]">
         <h1 id="tituloEstudios" class="text-center text-xl font-medium px-6 mb-4 xs:text-3xl md:text-4xl""></h1>
-        <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6 md:w-[70vw]"></div>
+        <div class="w-6/10 h-[3px] rounded-full bg-[#373D20] mb-6 md:w-[70vw] xl:w-[40vw]"></div>
 
         <div class="w-full pl-8 md:p-0">
             ${generarEstudios()}
@@ -70,9 +70,9 @@ function generarExpLab() {
 
     misDatos.experienciaLaboral.forEach(exp => {
         html += `
-            <div class="relative pl-[30vw] pb-8 group last:pb-0 sm:pl-[25vw] lg:pl-[20vw]">
-                <img src="${exp.img}" alt="${exp.nombre}" class="absolute left-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-r-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw] md:rounded-full lg:w-[15vw] lg:h-[15vw]">
-                <div class="absolute left-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:left-[8vw] md:left-[10vw] lg:left-[7.5vw]"></div>
+            <div class="relative pl-[30vw] pb-8 group last:pb-0 sm:pl-[25vw] lg:pl-[20vw] xl:pl-[12vw]">
+                <img src="${exp.img}" alt="${exp.nombre}" class="absolute left-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-r-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw] md:rounded-full lg:w-[15vw] lg:h-[15vw] xl:w-[10vw] xl:h-[10vw]">
+                <div class="absolute left-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:left-[8vw] md:left-[10vw] lg:left-[7.5vw] xl:left-[5vw]"></div>
 
                 <div class="flex flex-col gap-2">         
                     <h3 class="text-lg font-bold xs:text-xl sm:text-2xl md:text-3xl">${exp.nombre}</h3>
@@ -90,7 +90,7 @@ function generarExpLab() {
                         <span id="lugarExp${count}" class="w-9/10"></span>
                     </p>
                     
-                    <p id="descExp${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify sm:text-lg md:text-xl"></p>
+                    <p id="descExp${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify sm:text-lg md:text-xl xl:text-2xl"></p>
                 </div>
             </div>
         `;
@@ -107,9 +107,9 @@ function generarEstudios() {
 
     misDatos.estudios.forEach(estudio => {
         html += `
-            <div class="relative pr-[30vw] pb-8 group last:pb-0 sm:pr-[25vw] lg:pr-[20vw]">
-                <img src="${estudio.img}" alt="${estudio.nombre}" class="absolute right-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-l-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw] md:rounded-full lg:w-[15vw] lg:h-[15vw]">
-                <div class="absolute right-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:right-[8vw] md:right-[10vw] lg:right-[7.5vw]"></div>
+            <div class="relative pr-[30vw] pb-8 group last:pb-0 sm:pr-[25vw] lg:pr-[20vw] xl:pr-[12vw]">
+                <img src="${estudio.img}" alt="${estudio.nombre}" class="absolute right-0 top-0 w-[25vw] h-[25vw] object-cover rounded-y-full rounded-l-full border border-[#373D20] shadow-xl shadow-[#373D20]/25 z-10 bg-[#EFF1ED] text-xs sm:w-[20vw] sm:h-[20vw] md:rounded-full lg:w-[15vw] lg:h-[15vw] xl:w-[10vw] xl:h-[10vw]">
+                <div class="absolute right-[10vw] top-0 bottom-0 w-[1px] bg-[#373D20] group-last:hidden sm:right-[8vw] md:right-[10vw] lg:right-[7.5vw] xl:right-[5vw]"></div>
 
                 <div class="flex flex-col items-end gap-2">         
                     <h3 id="nombreEstudio${count}" class="text-lg font-bold text-right xs:text-xl sm:text-2xl md:text-3xl"></h3>
@@ -127,7 +127,7 @@ function generarEstudios() {
                         </svg>
                     </p>
                     
-                    <p id="descEstudio${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify sm:text-lg md:text-xl"></p>
+                    <p id="descEstudio${count}" class="leading-relaxed border-b border-[#373D20]/50 pb-4 text-justify sm:text-lg md:text-xl xl:text-2xl"></p>
                 </div>
             </div>
         `;
@@ -140,11 +140,15 @@ function generarEstudios() {
 
 export function generarHome() {
     document.getElementById("app").outerHTML = `
-        <div id="app" class="flex flex-col justify-center items-center">
+        <div id="app" class="bg-[#EFF1ED] flex flex-col justify-center items-center">
             ${Portada}
-            ${SobreMi}
-            ${expLaboral}
-            ${Estudios}
+            <div class="flex flex-col justify-center items-center xl:flex-row xl:items-start xl:gap-[4vw]">
+                ${SobreMi}
+                <div class="flex flex-col justify-center items-center xl:w-4/10">
+                    ${expLaboral}
+                    ${Estudios}
+                </div>
+            </div>
         </div>
     `;
 }
