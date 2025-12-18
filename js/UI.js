@@ -29,6 +29,10 @@ export const UI = {
         home : {
             es : "Hola! Me llamo Matheus Souza Fernandes y soy un ",
             en : "Hello! My name is Matheus Souza Fernandes and I am a "
+        },
+        skills : {
+            es : "Mis Conocimientos",
+            en : "My Skills"
         }
     },
     

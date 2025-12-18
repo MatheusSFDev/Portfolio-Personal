@@ -10,6 +10,7 @@ Paleta de Colores:
 Utilidades:
  - https://prismic.io/blog/css-button-animations : Numº 15
  - https://uiverse.io
+ - https://www.finisher.co/lab/header/
 
 Ejemplos de Portfolios:
  - https://yone.dev
