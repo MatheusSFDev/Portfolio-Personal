@@ -37,21 +37,52 @@ export function llenarSkills(idioma) {
         stringDelay: 500 
     });
 
+    efectoGradiente();
+}
+
+function efectoGradiente() {
+    const screenSize = window.innerWidth;
+    let size = 0;
+    let speed = 0;
+
+    if (screenSize >= 1536) {
+        size = 1600
+        speed = 5;
+    } else if (screenSize >= 1280) {
+        size = 1400
+        speed = 5;
+    } else if (screenSize >= 1024) {
+        size = 1200
+        speed = 5;
+    } else if (screenSize >= 768) {
+        size = 1000
+        speed = 4;
+    } else if (screenSize >= 640) {
+        size = 800
+        speed = 4;
+    } else if (screenSize >= 384) {
+        size = 700
+        speed = 3;
+    } else {
+        size = 600
+        speed = 2;
+    }
+
     new FinisherHeader({
         "count": 4,
         "size": {
-            "min": 800,
-            "max": 1250,
+            "min": size,
+            "max": size,
             "pulse": 1
         },
         "speed": {
             "x": {
-            "min": 4,
-            "max": 5
+            "min": speed,
+            "max": speed
             },
             "y": {
-            "min": 4,
-            "max": 5
+            "min": speed,
+            "max": speed
             }
         },
         "colors": {
