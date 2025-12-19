@@ -4,11 +4,11 @@ const Pagina = window.location.pathname.split("/").pop().split(".")[0];
 
 export function generarHeader() {
     document.getElementById("header").outerHTML = `
-        <header id="header" class="w-full p-2 fixed top-0 z-100 flex justify-center items-center text-xs xs:text-base md:text-lg xl:text-xl">
+        <header id="header" class="w-full p-2 fixed top-0 z-100 flex justify-center items-center text-xs xs:text-base md:text-lg xl:text-xl 2xl:text-2xl">
             <nav class="flex justify-between items-center px-3 py-2 rounded-full bg-[#EFF1ED]/40 backdrop-blur-xs md:gap-2 xl:gap-4">
                 <a id="nav_home" class="px-2 py-1 rounded-full" href="home.html#Portada"></a>
                 <a id="nav_contact" class="px-2 py-1 rounded-full" href="#footer_contact"></a>
-                <a id="nav_skills" class="px-2 py-1 rounded-full" href="skills.html"></a>
+                <a id="nav_skills" class="px-2 py-1 rounded-full" href="skills.html#Portada"></a>
                 <a id="nav_projects" class="px-2 py-1 rounded-full" href="projects.html"></a>
             </nav>
         </header>
@@ -54,9 +54,9 @@ export function generarBotonIdiomas(idiomaActual) {
     const claseInactiva = "bg-white border-[#373D20]";
 
     document.getElementById("cambiarIdioma").innerHTML = `
-        <div class="flex flex-col p-1.5 bg-[#EFF1ED]/10 backdrop-blur-sm rounded-full shadow-xl border border-[#373D20]">
-            <button id="btn-es" class="w-8 h-8 xs:w-10 xs:h-10 xs:w-12 xs:h-12 rounded-full font-bold text-xs md:text-sm transition-all duration-300 border mb-1 ${idiomaActual === 'es' ? claseActiva : claseInactiva}">ES</button>
-            <button id="btn-en" class="w-8 h-8 xs:w-10 xs:h-10 xs:w-12 xs:h-12 rounded-full font-bold text-xs md:text-sm transition-all duration-300 border ${idiomaActual === 'en' ? claseActiva : claseInactiva}">EN</button>
+        <div class="flex flex-col p-1.5 bg-[#EFF1ED]/10 backdrop-blur-sm rounded-full shadow-xl border border-[#373D20] font-bold text-xs md:text-sm 2xl:text-xl">
+            <button id="btn-es" class="w-8 h-8 xs:w-10 xs:h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 rounded-full transition-all duration-300 border mb-1 ${idiomaActual === 'es' ? claseActiva : claseInactiva}">ES</button>
+            <button id="btn-en" class="w-8 h-8 xs:w-10 xs:h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 rounded-full transition-all duration-300 border ${idiomaActual === 'en' ? claseActiva : claseInactiva}">EN</button>
         </div>
     `;
 }
