@@ -17,8 +17,8 @@ const Skills = `
 `;
 
 window.addEventListener('resize', () => {
-    const container = document.getElementById('Skills');
-    if (container) container.innerHTML = generarMallaSkills();
+    efectoGradiente();
+    document.getElementById('Skills').innerHTML = generarMallaSkills();
 });
 
 function nombresSkills() {
