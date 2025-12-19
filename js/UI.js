@@ -33,6 +33,10 @@ export const UI = {
         skills : {
             es : "Mis Conocimientos",
             en : "My Skills"
+        },
+        projects : {
+            es : "Mis Proyectos",
+            en : "My Projects"
         }
     },
     

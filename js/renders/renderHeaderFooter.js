@@ -9,7 +9,7 @@ export function generarHeader() {
                 <a id="nav_home" class="px-2 py-1 rounded-full" href="home.html#Portada"></a>
                 <a id="nav_contact" class="px-2 py-1 rounded-full" href="#footer_contact"></a>
                 <a id="nav_skills" class="px-2 py-1 rounded-full" href="skills.html#Portada"></a>
-                <a id="nav_projects" class="px-2 py-1 rounded-full" href="projects.html"></a>
+                <a id="nav_projects" class="px-2 py-1 rounded-full" href="projects.html#Portada"></a>
             </nav>
         </header>
     `;

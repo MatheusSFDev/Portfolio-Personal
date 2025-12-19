@@ -4,7 +4,7 @@ import {Typify} from '../Library/typify.min.js';
 
 const Portada = `
     <div id="Portada" style="height: 40vh;" class="relative w-full finisher-header flex flex-col justify-center items-center gap-4 pt-[5vh] text-white">
-        <p id="tituloPortada" class="w-2/3 text-center text-xl text-shadow-lg/20 xs:text-3xl sm:w-6/10 md:w-4/10 md:text-4xl xl:w-3/10 xl:text-5xl">Mis Conocimientos</p>
+        <p id="tituloPortada" class="w-2/3 text-center text-xl text-shadow-lg/20 xs:text-3xl sm:w-6/10 md:w-4/10 md:text-4xl xl:w-3/10 xl:text-5xl"></p>
         <div class="w-2/3 h-[2px] bg-white rounded-full sm:w-6/10 md:w-4/10 xl:w-3/10"></div>
         <p id="skills" class="w-2/3 text-center xs:text-xl sm:w-6/10 sm:text-2xl md:w-4/10 md:text-3xl xl:w-3/10 xl:text-4xl"></p>
     </div>
@@ -17,8 +17,10 @@ const Skills = `
 `;
 
 window.addEventListener('resize', () => {
-    efectoGradiente();
-    document.getElementById('Skills').innerHTML = generarMallaSkills();
+    const container = document.getElementById('Skills');
+    if (container) container.innerHTML = generarMallaSkills();
+    const Pagina = window.location.pathname.split("/").pop();
+    if (Pagina == "skills.html") efectoGradiente();
 });
 
 function nombresSkills() {

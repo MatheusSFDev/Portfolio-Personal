@@ -115,22 +115,40 @@ export const misDatos = {
 
     proyectos : [
         {
-            titulo : "Proyecto Final de HTML/CSS",
-            desc : "Desarrollé una página web totalmente responsiva desde cero. Utilicé HTML5 junto con CSS3 moderno para lograr una maquetación precisa y un código mantenible, consolidando así mis fundamentos en desarrollo frontend y buenas prácticas de diseño web.",
+            titulo : {
+                es : "Proyecto Final de HTML/CSS",
+                en : "Final Project with HTML/CSS"
+            },
+            desc : {
+                es :"Desarrollé una página web totalmente responsiva desde cero. Utilicé HTML5 junto con CSS3 moderno para lograr una maquetación precisa y un código mantenible, consolidando así mis fundamentos en desarrollo frontend y buenas prácticas de diseño web.",
+                en : ""
+            },
             fecha : "03-2025",
             img : "/imgs/proyectos/ProyectoFinal_HTML_CSS.jpeg",
             link : ""
         },
         {
-            titulo : "Biblioteca Online en PHP",
-            desc : "Desarrollé una plataforma web integral para la gestión de una biblioteca de videojuegos utilizando PHP y MySQL, enfocándome en la eficiencia del Backend y la integridad de los datos. Diseñé y estructuré la base de datos relacional para soportar operaciones CRUD completas y consultas optimizadas, e implementé un sistema robusto de autenticación y manejo de sesiones para garantizar la seguridad de los usuarios y administradores, integrando la lógica de negocio con una interfaz funcional y accesible.",
+            titulo : {
+                es : "Biblioteca Online en PHP",
+                en : "Online Library in PHP"
+            },
+            desc : {
+                es : "Desarrollé una plataforma web integral para la gestión de una biblioteca de videojuegos utilizando PHP y MySQL, enfocándome en la eficiencia del Backend y la integridad de los datos. Diseñé y estructuré la base de datos relacional para soportar operaciones CRUD completas y consultas optimizadas, e implementé un sistema robusto de autenticación y manejo de sesiones para garantizar la seguridad de los usuarios y administradores, integrando la lógica de negocio con una interfaz funcional y accesible.",
+                en : ""
+            },
             fecha : "10-2025",
             img : "/imgs/proyectos/BibliotecaOnline_PHP.jpeg",
             link : ""
         },
         {
-            titulo : "Tasks Manager con Laravel",
-            desc : "Construí una aplicación de gestión de tareas escalable utilizando el framework Laravel, implementando una arquitectura MVC sólida y buenas prácticas de desarrollo moderno. Diseñé el esquema de base de datos mediante migraciones y aproveché la potencia de Eloquent ORM para optimizar las interacciones con los datos, además de integrar sistemas de autenticación y validación robustos que garantizan la seguridad y el correcto flujo de la información en la administración de actividades.",
+            titulo : {
+                es : "Tasks Manager con Laravel",
+                en : "Tasks Manager in Laravel"
+            },
+            desc : {
+                es : "Construí una aplicación de gestión de tareas escalable utilizando el framework Laravel, implementando una arquitectura MVC sólida y buenas prácticas de desarrollo moderno. Diseñé el esquema de base de datos mediante migraciones y aproveché la potencia de Eloquent ORM para optimizar las interacciones con los datos, además de integrar sistemas de autenticación y validación robustos que garantizan la seguridad y el correcto flujo de la información en la administración de actividades.",
+                en : ""
+            },
             fecha : "11-2025",
             img : "/imgs/proyectos/TasksManager_Laravel.jpeg",
             link : ""
