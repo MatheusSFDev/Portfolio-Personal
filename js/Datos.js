@@ -125,7 +125,7 @@ export const misDatos = {
             },
             fecha : "03 - 2025",
             img : "/imgs/proyectos/ProyectoFinal_HTML_CSS.jpeg",
-            link : ""
+            link : "https://github.com/MatheusSFDev/Proyecto-Final-HTML-CSS"
         },
         {
             titulo : {
@@ -138,7 +138,7 @@ export const misDatos = {
             },
             fecha : "10 - 2025",
             img : "/imgs/proyectos/BibliotecaOnline_PHP.jpeg",
-            link : ""
+            link : "https://github.com/MatheusSFDev/Biblioteca-Online_PHP"
         },
         {
             titulo : {
@@ -151,7 +151,7 @@ export const misDatos = {
             },
             fecha : "11 - 2025",
             img : "/imgs/proyectos/TasksManager_Laravel.jpeg",
-            link : ""
+            link : "https://github.com/MatheusSFDev/Biblioteca-Online_PHP"
         },
     ],
 
