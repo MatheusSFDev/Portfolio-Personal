@@ -85,7 +85,8 @@ export function generarSkills() {
 export function llenarSkills(idioma) {
     document.getElementById("tituloPortada").innerText = UI.titulos.skills[idioma];
 
-    Typify('#skills', {
+    document.getElementById("skills").innerHTML = `<span id="nombres"></span>`;
+    Typify('#nombres', {
         text: nombresSkills(),
         delay: 80,
         loop: true,
