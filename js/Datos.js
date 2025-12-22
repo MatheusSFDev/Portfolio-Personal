@@ -151,7 +151,7 @@ export const misDatos = {
             },
             fecha : "11 - 2025",
             img : "/imgs/proyectos/TasksManager_Laravel.jpeg",
-            link : "https://github.com/MatheusSFDev/Biblioteca-Online_PHP"
+            link : "https://github.com/MatheusSFDev/TasksManager_ProyectoLaravel"
         },
     ],
 
