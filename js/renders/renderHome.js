@@ -37,7 +37,7 @@ const SobreMi = `
 
         <div>
             <img src="${misDatos.fotoPerfil}" class="w-4/10 rounded-r-full float-left mr-4 mb-4 shadow-xl shadow-[#373D20]/25 border-y border-r border-[#373D20] md:rounded-full md:border lg:w-3/10 xl:w-5/10">
-            <p id="descPersonal" class="text-justify px-8 xs:text-lg sm:text-xl md:text-2xl md:px-0 md:pt-2"></p>
+            <p id="descPersonal" class="leading-relaxed text-justify px-8 xs:text-lg sm:text-xl md:text-2xl md:px-0 md:pt-2"></p>
         </div>
     </div>
 `;

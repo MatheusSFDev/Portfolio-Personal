@@ -10,6 +10,23 @@ const Portada = `
     </div>
 `;
 
+const Projects = `
+    <style>
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .animate-glowing {
+            animation: glowing 20s linear infinite;
+        }
+    </style>
+
+    <div class="bg-[#EFF1ED] flex flex-col justify-center items-center group/proyecto">
+        ${generarListaProjects()}
+    </div>
+`;
+
 window.addEventListener('resize', () => {
     const Pagina = window.location.pathname.split("/").pop();
     if (Pagina == "projects.html") efectoGradiente();
@@ -23,16 +40,60 @@ function nombresProjects(idioma) {
     return lista;
 }
 
+function generarListaProjects() {
+    let projects = "";
+    let count = 0;
+    let order = ["order-1", "order-2"];
+    let items = ["items-start", "items-end"];
+    const gradientStyle = "background: linear-gradient(45deg, #373D20, #717744, #BCBD8B, #766153); background-size: 400%;";
+
+    misDatos.proyectos.forEach(proyecto => {
+            projects += `
+                <div class="flex flex-col justify-center items-center gap-4 px-[5vw] py-4 sm:px-[10vw] sm:py-6 md:px-[15vw] md:py-8 lg:px-[5vw] lg:flex-row lg:items-start xl:px-[10vw] xl:py-12">
+                    <a href="${proyecto.link}" class="relative block group/link shrink-0 xs:w-[90%] lg:w-[40vw] lg:${order[0]}">
+                        <div class="absolute -inset-2 rounded-lg blur opacity-0 group-hover/link:opacity-100 transition duration-500 animate-glowing z-0"
+                             style="${gradientStyle}">
+                        </div>
+
+                        <img src="${proyecto.img}" class="relative w-full rounded-lg z-10 bg-[#EFF1ED] block shadow-sm">
+                    </a>
+
+                    <div class="flex flex-col justify-center items-center gap-2 lg:gap-4 lg:${items[0]} lg:${order[1]}">
+                        <h2 id="tituloProyecto${count}" class="text-lg font-bold xs:text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl"></h2>
+                        <p class="w-fit text-sm font-semibold text-white bg-[#766153] px-2 py-0.5 rounded sm:text-base md:text-lg xl:text-xl 2xl:text-2xl">${proyecto.fecha}</p>
+                        <p id="descProyecto${count}" class="leading-relaxed text-justify xs:text-lg sm:text-xl xl:text-2xl 2xl:text-4xl"></p>
+                    </div>
+                </div>
+
+                <div class="w-[90vw] h-[1px] bg-[#373D20]/50 last:hidden sm:w-[80vw] md:w-[70vw] lg:w-[90vw] xl:w-[80vw]"></div>
+            `;
+        
+            count++;
+            order.reverse();
+            items.reverse();
+    });
+    
+    return projects;
+}
+
 export function generarProjects() {
     document.getElementById("app").outerHTML = `
         <div id="app" class="flex flex-col justify-center items-center">
             ${Portada}
+            ${Projects}
         </div>
     `;
 }
 
 export function llenarProjects(idioma) {
     document.getElementById("tituloPortada").innerText = UI.titulos.projects[idioma];
+
+    let count = 0;
+    misDatos.proyectos.forEach(proyecto => {
+        document.getElementById("tituloProyecto" + count).innerText = proyecto.titulo[idioma];
+        document.getElementById("descProyecto" + count).innerText = proyecto.desc[idioma];
+        count++;
+    });
 
     document.getElementById("projects").innerHTML = `<span id="nombres"></span>`;
     Typify('#nombres', {

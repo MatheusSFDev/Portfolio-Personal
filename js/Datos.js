@@ -121,9 +121,9 @@ export const misDatos = {
             },
             desc : {
                 es :"Desarrollé una página web totalmente responsiva desde cero. Utilicé HTML5 junto con CSS3 moderno para lograr una maquetación precisa y un código mantenible, consolidando así mis fundamentos en desarrollo frontend y buenas prácticas de diseño web.",
-                en : ""
+                en : "Developed a fully responsive website from scratch. Used HTML5 alongside modern CSS3 to achieve precise layout and maintainable code, solidifying my frontend development fundamentals and web design best practices."
             },
-            fecha : "03-2025",
+            fecha : "03 - 2025",
             img : "/imgs/proyectos/ProyectoFinal_HTML_CSS.jpeg",
             link : ""
         },
@@ -134,9 +134,9 @@ export const misDatos = {
             },
             desc : {
                 es : "Desarrollé una plataforma web integral para la gestión de una biblioteca de videojuegos utilizando PHP y MySQL, enfocándome en la eficiencia del Backend y la integridad de los datos. Diseñé y estructuré la base de datos relacional para soportar operaciones CRUD completas y consultas optimizadas, e implementé un sistema robusto de autenticación y manejo de sesiones para garantizar la seguridad de los usuarios y administradores, integrando la lógica de negocio con una interfaz funcional y accesible.",
-                en : ""
+                en : "Developed a comprehensive web platform for video game library management using PHP and MySQL, focusing on backend efficiency and data integrity. Designed and structured the relational database to support full CRUD operations and optimized queries. Implemented a robust authentication and session management system to ensure security for users and administrators, integrating business logic with a functional and accessible interface."
             },
-            fecha : "10-2025",
+            fecha : "10 - 2025",
             img : "/imgs/proyectos/BibliotecaOnline_PHP.jpeg",
             link : ""
         },
@@ -147,9 +147,9 @@ export const misDatos = {
             },
             desc : {
                 es : "Construí una aplicación de gestión de tareas escalable utilizando el framework Laravel, implementando una arquitectura MVC sólida y buenas prácticas de desarrollo moderno. Diseñé el esquema de base de datos mediante migraciones y aproveché la potencia de Eloquent ORM para optimizar las interacciones con los datos, además de integrar sistemas de autenticación y validación robustos que garantizan la seguridad y el correcto flujo de la información en la administración de actividades.",
-                en : ""
+                en : "Built a scalable task management application using the Laravel framework, implementing a solid MVC architecture and modern development best practices. Designed the database schema using migrations and leveraged the power of Eloquent ORM to optimize data interactions. Integrated robust authentication and validation systems to ensure security and proper data flow in activity management."
             },
-            fecha : "11-2025",
+            fecha : "11 - 2025",
             img : "/imgs/proyectos/TasksManager_Laravel.jpeg",
             link : ""
         },
