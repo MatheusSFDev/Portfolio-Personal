@@ -142,17 +142,30 @@ export const misDatos = {
         },
         {
             titulo : {
-                es : "Tasks Manager con Laravel",
-                en : "Tasks Manager in Laravel"
+                es : "Agenda de Macronutrientes",
+                en : "Macronutrient Tracker"
             },
             desc : {
-                es : "Construí una aplicación de gestión de tareas escalable utilizando el framework Laravel, implementando una arquitectura MVC sólida y buenas prácticas de desarrollo moderno. Diseñé el esquema de base de datos mediante migraciones y aproveché la potencia de Eloquent ORM para optimizar las interacciones con los datos, además de integrar sistemas de autenticación y validación robustos que garantizan la seguridad y el correcto flujo de la información en la administración de actividades.",
-                en : "Built a scalable task management application using the Laravel framework, implementing a solid MVC architecture and modern development best practices. Designed the database schema using migrations and leveraged the power of Eloquent ORM to optimize data interactions. Integrated robust authentication and validation systems to ensure security and proper data flow in activity management."
+                es : "Desarrollé una aplicación web full-stack utilizando Laravel y Livewire para el seguimiento detallado de la nutrición diaria. La plataforma permite a los usuarios gestionar productos, crear platos personalizados, establecer objetivos personales y planificar sus comidas a través de un calendario interactivo. Además, implementé un sistema seguro de autenticación, soporte bilingüe (español/inglés) y la funcionalidad para exportar reportes semanales en formato PDF.",
+                en : "Developed a full-stack web application using Laravel and Livewire for detailed daily nutrition tracking. The platform allows users to manage products, create custom meals, set personal goals, and plan their diet using an interactive calendar. Additionally, I implemented a secure authentication system, bilingual support (Spanish/English), and the functionality to export weekly reports in PDF format."
             },
-            fecha : "11 - 2025",
-            img : "/imgs/proyectos/TasksManager_Laravel.jpeg",
-            link : "https://github.com/MatheusSFDev/TasksManager_ProyectoLaravel"
+            fecha : "12-2025 - 01-2026",
+            img : "/imgs/proyectos/AgendaDeMacronutrientes.jpeg",
+            link : "https://github.com/MatheusSFDev/AgendaDeMacronutrientes"
         },
+        {
+            titulo : {
+                es : "API Demográfica",
+                en : "Demographic API"
+            },
+            desc : {
+                es : "Desarrollé una API RESTful utilizando Laravel para la consulta de datos demográficos estructurados (islas, municipios y registros de población). Implementé un sistema de autenticación segura mediante Laravel Sanctum y generé documentación interactiva utilizando Swagger (L5-Swagger). Además, programé seeders para la importación eficiente de datos masivos desde archivos CSV y diseñé endpoints optimizados con soporte para filtrado de parámetros.",
+                en : "Developed a RESTful API using Laravel for querying structured demographic data (islands, municipalities, and population records). Implemented a secure authentication system using Laravel Sanctum and generated interactive documentation using Swagger (L5-Swagger). Additionally, I programmed seeders for efficient mass data import from CSV files and designed optimized endpoints with parameter filtering support."
+            },
+            fecha : "01 - 2026",
+            img : "/imgs/proyectos/APIDemografica.jpeg", 
+            link : "https://github.com/MatheusSFDev/APIDemografica"
+        }
     ],
 
     conocimientos : [
@@ -169,9 +182,12 @@ export const misDatos = {
         { nombre : "Express", img : "/imgs/conocimientos/express.png" },
         { nombre : "Node", img : "/imgs/conocimientos/node.png" },
         { nombre : "Laravel", img : "/imgs/conocimientos/laravel.png" },
+        { nombre : "Vue", img : "/imgs/conocimientos/vue.png"},
         { nombre : "MongoDB", img : "/imgs/conocimientos/mongodb.png" },
         { nombre : "MySQL", img : "/imgs/conocimientos/mysql.png" },
         { nombre : "Docker", img : "/imgs/conocimientos/docker.png" },
+        { nombre : "Proxmox", img : "/imgs/conocimientos/proxmox.png"},
+        { nombre : "IsardVDI", img : "/imgs/conocimientos/isardvdi.png"},
         { nombre : "Git", img : "/imgs/conocimientos/git.png" },
         { nombre : "GitHub", img : "/imgs/conocimientos/github.png" },
         { nombre : "Linux", img : "/imgs/conocimientos/linux.png" },
@@ -189,6 +205,7 @@ export const misDatos = {
         { nombre : "Markdown", img : "/imgs/conocimientos/markdown.png" },
         { nombre : "Gemini", img : "/imgs/conocimientos/gemini.png" },
         { nombre : "Claude", img : "/imgs/conocimientos/claude.png" },
-        { nombre : "ChatGPT", img : "/imgs/conocimientos/chatgpt.png"  }
+        { nombre : "ChatGPT", img : "/imgs/conocimientos/chatgpt.png" },
+        
     ]
 };
