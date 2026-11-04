@@ -2,7 +2,7 @@ import {generarHeader, generarFooter, llenarHeaderFooter, generarBotonIdiomas} f
 import {generarHome, llenarHome} from './renders/renderHome.js';
 import {generarSkills, llenarSkills} from './renders/renderSkills.js';
 import {generarProjects, llenarProjects} from './renders/renderProjects.js';
-let idioma = localStorage.getItem("lang") || "es";
+let idioma = localStorage.getItem("lang") || ((navigator.language.slice(0, 2) == "es") ? "es" : "en");
 const Pagina = window.location.pathname.split("/").pop();
 
 function renderPagina() {

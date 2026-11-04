@@ -1,6 +1,7 @@
 import {misDatos} from '../Datos.js';
 import {UI} from '../UI.js';
 import {Typify} from '../Library/typify.min.js';
+let resizeTimer;
 
 const Portada = `
     <div id="Portada" style="height: 40vh;" class="relative w-full finisher-header flex flex-col justify-center items-center gap-4 pt-[5vh] text-white">
@@ -17,10 +18,26 @@ const Skills = `
 `;
 
 window.addEventListener('resize', () => {
-    const container = document.getElementById('Skills');
-    if (container) container.innerHTML = generarMallaSkills();
-    const Pagina = window.location.pathname.split("/").pop();
-    if (Pagina == "skills.html") efectoGradiente();
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+        const container = document.getElementById('Skills');
+
+        if (container) container.innerHTML = generarMallaSkills();
+        
+        const Pagina = window.location.pathname.split("/").pop();
+
+        if (Pagina == "skills.html") {
+            const headerPortada = document.getElementById('Portada');
+
+            if (headerPortada) {
+                const oldCanvas = headerPortada.querySelector('canvas');
+                if (oldCanvas) oldCanvas.remove();
+            }
+
+            efectoGradiente();
+        }
+    }, 250);
 });
 
 function nombresSkills() {
