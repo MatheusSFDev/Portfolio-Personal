@@ -1,6 +1,7 @@
 import {misDatos} from '../Datos.js';
 import {UI} from '../UI.js';
 import {Typify} from '../Library/typify.min.js';
+let resizeTimer;
 
 const Portada = `
     <div id="Portada" style="height: 40vh;" class="relative w-full finisher-header flex flex-col justify-center items-center gap-4 pt-[5vh] text-white">
@@ -28,8 +29,22 @@ const Projects = `
 `;
 
 window.addEventListener('resize', () => {
-    const Pagina = window.location.pathname.split("/").pop();
-    if (Pagina == "projects.html") efectoGradiente();
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+        const Pagina = window.location.pathname.split("/").pop();
+
+        if (Pagina == "projects.html") {
+            const headerPortada = document.getElementById('Portada');
+
+            if (headerPortada) {
+                const oldCanvas = headerPortada.querySelector('canvas');
+                if (oldCanvas) oldCanvas.remove();
+            }
+
+            efectoGradiente();
+        }
+    }, 250);
 });
 
 function nombresProjects(idioma) {
