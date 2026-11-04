@@ -7,7 +7,7 @@ export function generarHeader() {
         <header id="header" class="w-full p-2 fixed top-0 z-100 flex justify-center items-center text-xs xs:text-base md:text-lg xl:text-xl 2xl:text-2xl">
             <nav class="flex justify-between items-center px-3 py-2 rounded-full bg-[#EFF1ED]/40 backdrop-blur-xs md:gap-2 xl:gap-4">
                 <a id="nav_home" class="px-2 py-1 rounded-full" href="home.html#Portada"></a>
-                <a id="nav_contact" class="px-2 py-1 rounded-full" href="#footer_contact"></a>
+                <a id="nav_contact" class="px-2 py-1 rounded-full" href="#footer_contactos"></a>
                 <a id="nav_skills" class="px-2 py-1 rounded-full" href="skills.html#Portada"></a>
                 <a id="nav_projects" class="px-2 py-1 rounded-full" href="projects.html#Portada"></a>
             </nav>
@@ -25,8 +25,6 @@ export function generarFooter() {
                 <div class="w-1 h-1 rounded-full bg-white"></div>
                 <p class="ml-2">Matheus Souza Fernandes</p>
             </div>
-
-            <p id="footer_contact" class="text-lg xs:text-2xl md:text-3xl xl:text-4xl"></p>
 
             <div id="footer_contactos" class="flex justify-center items-center gap-4">
                 ${generarContactos()}
@@ -66,6 +64,5 @@ export function llenarHeaderFooter(idioma) {
     document.getElementById("nav_skills").innerHTML = UI.nav.skills[idioma];
     document.getElementById("nav_projects").innerHTML = UI.nav.projects[idioma];
     document.getElementById("nav_contact").innerHTML = UI.nav.contact[idioma];
-    document.getElementById("footer_contact").innerHTML = UI.footer.contact[idioma];
     document.title = UI.nav[Pagina][idioma];
 }

@@ -50,7 +50,7 @@ function generarListaProjects() {
     misDatos.proyectos.forEach(proyecto => {
             projects += `
                 <div class="flex flex-col justify-center items-center gap-4 px-[5vw] py-4 sm:px-[10vw] sm:py-6 md:px-[15vw] md:py-8 lg:px-[5vw] lg:flex-row lg:items-start xl:px-[10vw] xl:py-12">
-                    <a href="${proyecto.link}" class="relative block group/link shrink-0 xs:w-[90%] lg:w-[40vw] lg:${order[0]}">
+                    <a href="${proyecto.link}" target="_blank" class="relative block group/link shrink-0 xs:w-[90%] lg:w-[40vw] lg:${order[0]}">
                         <div class="absolute -inset-2 rounded-lg blur opacity-0 group-hover/link:opacity-100 transition duration-500 animate-glowing z-0"
                              style="${gradientStyle}">
                         </div>
